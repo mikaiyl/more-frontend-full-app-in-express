@@ -12,33 +12,60 @@
         <div id="form-div" style="position: absolute;left: 25%; width: 50%;">
             <form id="user-create-form">
                 <!-- Add user input fields here -->
+                <fieldset>
+                    <div class="form-group row">
+                        <label for="text-input" class="col-2 col-form-label">Username</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" placeholder="Username" id="inputUsername" autofocus >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="userTypeFormSelector"class="col-2 col-form-label">Example select</label>
+                        <div class="col-10">
+                            <select class="form-control" id="userTypeControlSelect">
+                                <option>Author</option>
+                                <option>Editor</option>
+                                <option>Administrator</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-2 col-form-label">Email address</label>
+                        <div class="col-10">
+                            <input type="email" autocomplete="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-2 col-form-label">Password</label>
+                        <div class="col-10">
+                            <input type="password" autocomplete="current-password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPhone" class="col-2 col-form-label">Phone Number</label>
+                        <div class="col-10">
+                            <input class="form-control" autocomplete="tel tel-national" type="tel" placeholder="1-(000)-000-0000" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="text-input" class="col-2 col-form-label">Homepage</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" placeholder="Homepage" id="inputHomepage">
+                        </div>
+                    </div>
+                    <div class="input-group row">
+                        <label for="text-input" class="col-2 col-form-label">Homepage</label>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text mb-5 col-centered col-10">
+                                <input type="checkbox" aria-label="Checkbox for following text input">
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="form-group row">
-                    <label for="example-text-input" class="col-2 col-form-label">Username</label>
-                    <div class="col-10">
-                        <input class="form-control" type="text" placeholder="Username" id="inputUsername">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputEmail" class="col-2 col-form-label">Email address</label>
-                    <div class="col-10">
-                        <input type="email" autocomplete="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-2 col-form-label">Password</label>
-                    <div class="col-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPhone" class="col-2 col-form-label">Phone Number</label>
-                    <div class="col-10">
-                        <input class="form-control" autocomplete="tel tel-national" type="tel" placeholder="1-(000)-000-0000" id="inputPhone">
-                    </div>
-                </div>
+                    <button type="submit" class="btn btn-primary">Create User</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
 
-                <button type="submit" class="btn btn-primary">Create User</button>
+                </fieldset>
             </form>
         </div>
 
@@ -53,8 +80,7 @@
                     </div>
                     <div class="modal-body"></div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

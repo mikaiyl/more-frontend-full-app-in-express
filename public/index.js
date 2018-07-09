@@ -7,6 +7,8 @@ const username = document.getElementById('inputUsername')
 const email = document.getElementById('inputEmail')
 const password = document.getElementById('inputPassword')
 const phone = document.getElementById('inputPhone')
+const homepage = document.getElementById('inputHomepage')
+const userType = document.getElementById('userTypeControlSelect')
 
 userCreateForm.addEventListener( 'submit', handleClick )
 
@@ -33,10 +35,12 @@ function postData(url, data) {
         console.log( status )
         console.log( json )
         if ( status === 201 ) {
-            document.querySelector( '#modalLabel' ).textContent = json.message
+            document.querySelector( '.modal-body' ).textContent = json.message
+            document.querySelector( '#modalLabel' ).textContent = 'Welcome!'
             $( '#modal' ).modal( 'show' )
         } else if ( status === 409 ) {
-            document.querySelector( '#modalLabel' ).textContent = json.message
+            document.querySelector( '.modal-body' ).textContent = json.message
+            document.querySelector( '#modalLabel' ).textContent = 'Request failed!'
             $( '#modal' ).modal( 'show' )
         }
     } )
@@ -44,11 +48,14 @@ function postData(url, data) {
 
 function handleClick( event ) {
     event.preventDefault()
+
     let userPackage = {
         username: username.value,
         email: email.value,
         password: password.value,
         phone: phone.value,
+        homepage: homepage.value,
+        userType: userType.value,
     }
     postData( 'http://localhost:3000/api/user', userPackage )
 }

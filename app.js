@@ -14,7 +14,9 @@ app.post( '/api/user', ( req, res ) => {
 
     if ( !users.includes( req.body.username ) ) {
         let user = req.body.username
+
         users.push( user )
+
         console.log( user + ' added to users.\n' )
         console.log( 'Current users are: ' + users.join(', ') )
 
